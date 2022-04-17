@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { underline } from "../../styles/animations/underline";
 
 export const Logo = styled.h1`
   text-transform: uppercase;
@@ -8,7 +7,7 @@ export const Logo = styled.h1`
 
 const UnderlineLogo = () => {
   return (
-    <Logo underline>
+    <Logo>
       E<small>irik</small>
       <sup> B</sup>
     </Logo>
