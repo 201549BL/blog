@@ -6,7 +6,7 @@ img: /images/workout.jpg
 
 # A First Level Header
 
-![Alt text](/images/flowers "a title")
+![Alt text](/images/flowers.avif "a title")
 
 ## A Second Level Header
 
