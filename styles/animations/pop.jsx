@@ -1,5 +1,4 @@
 import { css } from "styled-components";
-import { Logo } from "../../components/Header/UnderlineLogo";
 
 export const pop = () => css`
   & {
