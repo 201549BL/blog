@@ -6,9 +6,10 @@ import { serialize } from "next-mdx-remote/serialize";
 import Image from "next/image";
 import rehypeHighlight from "rehype-highlight";
 import { PostContainer } from "../../styles/Post";
+import DynamicImage from "../../components/DynamicImage";
 
 const components = {
-  Image,
+  img: DynamicImage,
 };
 
 export default function PostPage({ data, source }) {
@@ -31,8 +32,6 @@ export async function getStaticProps({ params: { slug } }) {
       rehypePlugins: [rehypeHighlight],
     },
   });
-
-  console.log(source);
 
   return {
     props: {
