@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Button } from "../../styles/Buttons";
 import { HeaderContainer } from "../../styles/Header";
 import Linkable from "../Linkable";
-import ThemeToggleButton from "../ThemeToggleButton";
+import ThemeToggleButton from "./ThemeToggleButton";
 import UnderlineLogo from "./UnderlineLogo";
 import { underline } from "../../styles/animations/underline";
 

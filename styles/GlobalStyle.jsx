@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
     --border-radius-md: 1rem;
     --border-radius-sm: 0.3rem;
     --font-size-p: clamp(0.875rem,  calc(1vw + 0.7rem), 1.3rem);
+
+
   }
 
   * {

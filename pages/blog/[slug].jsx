@@ -3,13 +3,14 @@ import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import Image from "next/image";
 import rehypeHighlight from "rehype-highlight";
 import { PostContainer } from "../../styles/Post";
 import DynamicImage from "../../components/DynamicImage";
+import PostLink from "../../components/posts/PostLink";
 
 const components = {
   img: DynamicImage,
+  a: PostLink,
 };
 
 export default function PostPage({ data, source }) {
