@@ -25,7 +25,7 @@ export default function Home({ posts }) {
           return (
             <Linkable
               key={index}
-              animation={() => pop()}
+              animation={pop}
               href={path.join("/blog", post.slug)}
             >
               <HorizontalCard
@@ -45,7 +45,7 @@ export async function getStaticProps() {
   const files = fs.readdirSync("posts");
 
   const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
+    const slug = filename.replace(".mdx", "");
 
     const markdownWithMeta = fs.readFileSync(
       path.join("posts", filename),
