@@ -3,7 +3,6 @@ import useThemeToggle from "../hooks/useThemeToggle";
 import GlobalStyle from "../styles/GlobalStyle";
 import Header from "./header/Header";
 import styled from "styled-components";
-import Head from "next/head";
 
 const Main = styled.main`
   max-width: 50rem;
