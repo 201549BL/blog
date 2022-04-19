@@ -1,4 +1,6 @@
 import { css } from "styled-components";
+import { boxShadow } from "../utils/boxShadow";
+
 /* Dracula Theme v1.2.5
  *
  * https://github.com/dracula/highlightjs
@@ -19,6 +21,8 @@ export const dracula = css`
     padding: 0.5em;
     background: #282a36;
     font-family: "JetBrains Mono", monospace;
+    border-radius: var(--border-radius-sm);
+    ${boxShadow("md")};
   }
 
   .hljs-built_in,

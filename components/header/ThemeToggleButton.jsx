@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../../styles/Buttons";
+import { HollowButton } from "../../styles/Buttons";
 import {
   IoSunnyOutline,
   IoSunny,
