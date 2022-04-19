@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { spacer } from "./utils/spacer";
+import { dracula } from "./highlight/dracula.jsx";
 
 export const PostContainer = styled.article`
   padding: 2rem;
@@ -10,4 +11,6 @@ export const PostContainer = styled.article`
   border-radius: var(--border-radius-md);
 
   ${spacer()}
+
+  ${dracula}
 `;

@@ -51,11 +51,14 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {
-      color: ${({ theme }) => theme?.colors?.primarySelected ?? "purple"};
-      ${underline(({ theme }) => theme?.colors?.primarySelected)};
+      color: ${({ theme }) => theme?.colors?.primary ?? "purple"};
+      ${underline(({ theme }) => theme?.colors?.primary)};
       
       text-decoration: none;
       font-weight: 700;     
+
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     header a {
