@@ -7,6 +7,7 @@ import rehypeHighlight from "rehype-highlight";
 import { PostContainer } from "../../styles/Post";
 import DynamicImage from "../../components/DynamicImage";
 import PostLink from "../../components/posts/PostLink";
+import Head from "next/head";
 
 const components = {
   img: DynamicImage,
@@ -16,6 +17,9 @@ const components = {
 export default function PostPage({ data, source }) {
   return (
     <PostContainer>
+      <Head>
+        <title>{data.title}</title>
+      </Head>
       <MDXRemote {...source} components={components} />
     </PostContainer>
   );
