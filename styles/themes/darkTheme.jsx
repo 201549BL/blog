@@ -7,6 +7,7 @@ export const darkTheme = {
     primary: "#E43A72",
     primarySelected: "#E43A72",
     primaryFont: "#fff0f3",
+    shadow: "#000000",
   },
   type: "dark",
 };
