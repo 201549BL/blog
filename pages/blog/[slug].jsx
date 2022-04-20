@@ -8,10 +8,12 @@ import { PostContainer } from "../../styles/Post";
 import DynamicImage from "../../components/DynamicImage";
 import PostLink from "../../components/posts/PostLink";
 import Head from "next/head";
+import Aside from "../../components/posts/Aside";
 
 const components = {
   img: DynamicImage,
   a: PostLink,
+  Aside,
 };
 
 export default function PostPage({ data, source }) {
