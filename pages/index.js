@@ -6,6 +6,7 @@ import HorizontalCard from "../components/HorizontalCard";
 import Head from "next/head";
 import Linkable from "../components/Linkable";
 import { pop } from "../styles/animations/pop";
+import { getAllPosts } from "../apis/post";
 
 const CenteredSection = styled.section`
   display: grid;
@@ -42,7 +43,7 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const files = fs.readdirSync("posts");
+  const files = getAllPosts();
 
   const posts = files.map((filename) => {
     const slug = filename.replace(".mdx", "");

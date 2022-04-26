@@ -5,8 +5,6 @@ import Header from "./header/Header";
 import styled from "styled-components";
 
 const Main = styled.main`
-  max-width: 50rem;
-  margin: 0 auto;
   padding: 1rem;
 `;
 

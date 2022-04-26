@@ -17,6 +17,10 @@ const GlobalStyle = createGlobalStyle`
     --font-size-p: clamp(0.875rem,  calc(1vw + 0.7rem), 1.3rem);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -50,13 +54,9 @@ const GlobalStyle = createGlobalStyle`
 
     a {
       color: ${({ theme }) => theme?.colors?.primary ?? "purple"};
-      ${underline(({ theme }) => theme?.colors?.primary)};
       
       text-decoration: none;
       font-weight: 400;     
-
-      white-space: nowrap;
-      overflow: hidden;
     }
 
     header a {

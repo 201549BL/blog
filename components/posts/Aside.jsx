@@ -1,10 +1,19 @@
 import React from "react";
-import { AsideFactory } from "../../styles/Aside";
+import { AsideContainer } from "../../styles/Aside";
+
+const colors = {
+  success: "#30c85e",
+  danger: "#FF0000",
+  info: "#36a3ff",
+};
 
 const Aside = ({ children, type }) => {
-  const AsideContainer = AsideFactory(type);
+  if (!colors[type])
+    throw new Error(
+      `"${type}" is not a valid type argument in AsideFactory function`
+    );
 
-  return <AsideContainer>{children}</AsideContainer>;
+  return <AsideContainer type={colors[type]}>{children}</AsideContainer>;
 };
 
 export default Aside;

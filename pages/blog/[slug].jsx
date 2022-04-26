@@ -9,11 +9,18 @@ import DynamicImage from "../../components/DynamicImage";
 import PostLink from "../../components/posts/PostLink";
 import Head from "next/head";
 import Aside from "../../components/posts/Aside";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
+import Toc from "../../components/posts/Toc";
+
+import { myRehypeToc } from "../../plugins/myRehypeToc";
 
 const components = {
-  img: DynamicImage,
   a: PostLink,
+  nav: Toc,
+  DynamicImage,
   Aside,
+  nav: Toc,
 };
 
 export default function PostPage({ data, source }) {
@@ -34,9 +41,16 @@ export async function getStaticProps({ params: { slug } }) {
   );
 
   const { data, content } = matter(markdownWithMeta);
+
   const source = await serialize(content, {
     mdxOptions: {
-      rehypePlugins: [rehypeHighlight],
+      remarkPlugins: [],
+      rehypePlugins: [
+        rehypeSlug,
+        myRehypeToc,
+        [rehypeAutolinkHeadings, { behavior: "wrap" }],
+        rehypeHighlight,
+      ],
     },
   });
 
