@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { underline } from "./animations/underline";
 
 const GlobalStyle = createGlobalStyle`
   :root {

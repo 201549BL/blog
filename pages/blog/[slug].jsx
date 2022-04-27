@@ -14,13 +14,14 @@ import rehypeSlug from "rehype-slug";
 import Toc from "../../components/posts/Toc";
 
 import { myRehypeToc } from "../../plugins/myRehypeToc";
+import PostMain from "../../components/posts/PostMain";
 
 const components = {
   a: PostLink,
   nav: Toc,
+  main: PostMain,
   DynamicImage,
   Aside,
-  nav: Toc,
 };
 
 export default function PostPage({ data, source }) {
