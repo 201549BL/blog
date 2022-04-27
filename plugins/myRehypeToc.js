@@ -7,8 +7,6 @@ export const myRehypeToc = () => (tree) => {
   let headings = [];
 
   visit(tree, "element", (node) => {
-    console.log(node);
-
     if (["h1", "h2", "h3"].includes(node.tagName)) {
       headings.push({
         type: node.tagName,
