@@ -19,7 +19,9 @@ export const myRehypeToc = () => (tree) => {
   });
 
   const hastHeadings = headings.map((heading) => {
-    return h("li", [h("a", { href: heading.href }, heading.text)]);
+    return h("li", { class: heading.type }, [
+      h("a", { href: heading.href }, heading.text),
+    ]);
   });
 
   const hastNav = h("header", h("nav", [h("ul", [...hastHeadings])]));
